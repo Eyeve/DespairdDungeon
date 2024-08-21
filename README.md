@@ -1,2 +1,3 @@
-# DespairdDungeon
+# DungeonOfDespair
+
 Roguelike game

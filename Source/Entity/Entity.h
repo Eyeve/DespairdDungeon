@@ -1,10 +1,11 @@
-#ifndef DESPAIRDUNGEON_ENTITY_H
-#define DESPAIRDUNGEON_ENTITY_H
+#ifndef DUNGEONOFDESPAIR_ENTITY_H
+#define DUNGEONOFDESPAIR_ENTITY_H
 
+#include "ControllerEvent.h"
 
 class Entity {
 
 };
 
 
-#endif //DESPAIRDUNGEON_ENTITY_H
+#endif //DUNGEONOFDESPAIR_ENTITY_H

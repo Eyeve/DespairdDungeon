@@ -1,17 +1,27 @@
-#ifndef DESPAIRDUNGEON_ENGINE_H
-#define DESPAIRDUNGEON_ENGINE_H
+#ifndef DUNGEONOFDESPAIR_ENGINE_H
+#define DUNGEONOFDESPAIR_ENGINE_H
 
 #include <iostream>
 #include <random>
 #include <chrono>
+#include <unordered_set>
+
+#include "Session.h"
+#include "EventHandler.h"
+#include "Controller.h"
+#include "Entity.h"
 
 
 class Engine {
 
+    Session session;
+    EventHandler eventHandler;
+    std::unordered_set<Controller*> controllers;
+    std::unordered_set<Entity*> updatable;
     bool isRunning;
 
 public:
-    Engine(): isRunning(true) {}
+    Engine(): eventHandler(EventHandler(session)), isRunning(false) {}
     ~Engine() {}
 
     /*
@@ -33,13 +43,13 @@ public:
 
 private:
     /*
-     * @brief ...
+     * @brief triggers one event update cycle
      *
-     * @param amount of time that has passed since the last update
+     * @param deltaTime amount of time that has passed since the last update
      */
     void update(float deltaTime);
 
 };
 
 
-#endif //DESPAIRDUNGEON_ENGINE_H
+#endif //DUNGEONOFDESPAIR_ENGINE_H
