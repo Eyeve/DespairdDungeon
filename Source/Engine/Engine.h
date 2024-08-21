@@ -14,21 +14,25 @@
 
 class Engine {
 
+protected:
     Session session;
     EventHandler eventHandler;
     std::unordered_set<Controller*> controllers;
     std::unordered_set<Entity*> updatable;
+private:
     bool isRunning;
 
 public:
-    Engine(): eventHandler(EventHandler(session)), isRunning(false) {}
+    Engine(): eventHandler(EventHandler(session)), isRunning(false) { initialization(); }
     ~Engine() {}
+
+    void initialization();
 
     /*
      * @brief start the engine processing thread
      *
      */
-    void execute();
+    void execute() { if (!isRunning) execution(); }
     /*
      * @brief stop the engine processing thread
      *
@@ -41,7 +45,12 @@ public:
      */
     bool isExecuted() const { return isRunning; }
 
-private:
+protected:
+    /*
+     * @brief implementation of the execute method
+     *
+     */
+    virtual void execution();
     /*
      * @brief triggers one event update cycle
      *

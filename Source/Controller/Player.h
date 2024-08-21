@@ -2,7 +2,7 @@
 #define DUNGEONOFDESPAIR_PLAYER_H
 
 #include "Controller.h"
-#include "SessionEvent.h"
+#include "Session/SessionEvent.h"
 
 class Player: public Controller {
 

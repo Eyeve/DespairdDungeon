@@ -1,6 +1,10 @@
 #include "Engine.h"
 
-void Engine::execute() {
+void Engine::initialization() {
+
+}
+
+void Engine::execution() {
     using clock = std::chrono::steady_clock;
     using timePoint = std::chrono::time_point<clock>;
     using duration = std::chrono::duration<float, std::milli>;
@@ -29,3 +33,5 @@ void Engine::update(float deltaTime) {
         eventHandler.update(toUpdate);
     }
 }
+
+
