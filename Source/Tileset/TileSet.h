@@ -5,6 +5,7 @@
 template<> \
 inline bool isCollide<ID>() { return false; }
 
+
 enum TileID {
     CAVE,
 };

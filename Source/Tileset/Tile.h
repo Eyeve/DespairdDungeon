@@ -3,6 +3,7 @@
 
 #include "TileSet.h"
 
+
 struct Tile {
      TileID ID;
      StructureID structure;

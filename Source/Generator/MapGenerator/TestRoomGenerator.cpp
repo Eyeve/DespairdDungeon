@@ -1,7 +1,8 @@
 #include "TestRoomGenerator.h"
 
+
 void TestRoomGenerator::generation(Map* map, Map::ChunkMap& chunks) {
-    Cords<int> chunkCords;
+    ChunkCords<int> chunkCords;
     int chunkLimit = roomChunkSize - 1;
     int limit = CHUNK_SIDE - 1;
 

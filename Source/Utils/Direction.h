@@ -1,6 +1,7 @@
 #ifndef DUNGEONOFDESPAIR_DIRECTION_H
 #define DUNGEONOFDESPAIR_DIRECTION_H
 
+
 enum Direction: unsigned char {
     NONE        = 0b0000,
     UP          = 0b1000,

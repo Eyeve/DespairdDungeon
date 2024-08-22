@@ -1,10 +1,11 @@
 #include "Map.h"
 
+
 void Map::initialization() {
     for (int x = 0; x < weight; ++x) {
         for (int y = 0; y < height; ++y) {
             // Generate new empty chunk
-            chunks[Cords<int>(x, y)];
+            chunks[ChunkCords<int>(x, y)];
         }
     }
 }

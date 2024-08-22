@@ -6,6 +6,7 @@
 #include "ControllerEvent.h"
 #include "Entity.h"
 
+
 class EventHandler {
 
     Session& session;
@@ -20,7 +21,7 @@ public:
      *
      * @param deltaTime value to set
      */
-    void setDeltaTime(float deltaTime) { this->deltaTime = deltaTime; }
+    void setDeltaTime(float value) { deltaTime = value; }
     /*
      * @brief process ControllerEvent, updating session data
      *

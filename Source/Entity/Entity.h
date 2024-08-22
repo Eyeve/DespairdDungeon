@@ -5,6 +5,7 @@
 #include "Texture.h"
 #include "Controller.h"
 
+
 class Entity {
 
     Controller* controller;

@@ -1,6 +1,7 @@
 #ifndef DUNGEONOFDESPAIR_SESSIONEVENT_H
 #define DUNGEONOFDESPAIR_SESSIONEVENT_H
 
+
 class SessionEvent {
 
 };

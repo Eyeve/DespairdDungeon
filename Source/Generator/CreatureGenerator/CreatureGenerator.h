@@ -3,6 +3,7 @@
 
 #include "Generator.h"
 
+
 class CreatureGenerator {
 
 };

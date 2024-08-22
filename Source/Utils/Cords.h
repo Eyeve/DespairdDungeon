@@ -3,6 +3,12 @@
 
 #include <functional>
 
+#include "Config.h"
+
+
+template<typename T>
+struct ChunkCords;
+
 template<typename T>
 struct Cords {
 
@@ -14,8 +20,11 @@ struct Cords {
 
     T getX() const { return x; }
     T getY() const { return y; }
+    T getXOff() const { return x % CHUNK_SIDE; }
+    T getYOff() const { return y % CHUNK_SIDE; }
 
     bool operator==(const Cords<T>& other) const { return x == other.x && y == other.y; }
+    operator ChunkCords<T>() const;
 };
 
 namespace std {

@@ -1,6 +1,7 @@
 #ifndef DUNGEONOFDESPAIR_GENERATOR_H
 #define DUNGEONOFDESPAIR_GENERATOR_H
 
+
 class Generator {
 
 };

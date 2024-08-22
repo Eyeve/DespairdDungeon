@@ -9,7 +9,6 @@ struct ControllerEvent {
     Direction movementDirection;
 
     ControllerEvent(Direction movementDirection = Direction::NONE): movementDirection(movementDirection) {}
-
 };
 
 #endif //DUNGEONOFDESPAIR_CONTROLLEREVENT_H

@@ -3,7 +3,7 @@
 
 #include <unordered_map>
 
-#include "Cords.h"
+#include "ChunkCords.h"
 #include "Chunk.h"
 
 
@@ -12,7 +12,7 @@ class MapGenerator;
 class Map {
 
 public:
-    using ChunkMap = std::unordered_map<Cords<int>, Chunk>;
+    using ChunkMap = std::unordered_map<ChunkCords<int>, Chunk>;
     friend MapGenerator;
 
 protected:

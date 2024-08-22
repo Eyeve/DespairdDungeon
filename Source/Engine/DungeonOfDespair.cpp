@@ -1,6 +1,7 @@
 #include "DungeonOfDespair.h"
 #include "Player.h"
 
+
 void DungeonOfDespair::execution() {
     delete session.map;
     session.map = new Map();
@@ -11,12 +12,10 @@ void DungeonOfDespair::execution() {
 
     session.entities.clear();
     createHero();
-
     Engine::execution();
 }
 
 void DungeonOfDespair::createHero() {
-    // TODO: cleanup
     Player* player = new Player();
 
     Creature* hero = new Creature(player, nullptr, Cords<int>(20, 20), nullptr);
