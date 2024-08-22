@@ -9,18 +9,16 @@ void Engine::execution() {
     using timePoint = std::chrono::time_point<clock>;
     using duration = std::chrono::duration<float, std::milli>;
 
-    if (isRunning) {
-        return;
-    }
-
     std::chrono::duration<float, std::milli> deltaTime(0);
-    isRunning = true;
 
-    while (isRunning) {
+    isExecuted = true;
+    isRunning = true;
+    while (isExecuted) {
         timePoint start = clock::now();
         update(deltaTime.count());
         deltaTime = clock::now() - start;
     }
+    isRunning = false;
 }
 
 void Engine::update(float deltaTime) {

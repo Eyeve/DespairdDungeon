@@ -8,7 +8,10 @@
 class MapGenerator: public Generator {
 
 public:
-    virtual void generate(Map* map) = 0;
+    void generate(Map* map) { generation(map, map->chunks); }
+
+protected:
+    virtual void generation(Map* map, Map::ChunkMap& chunks) = 0;
 
 };
 

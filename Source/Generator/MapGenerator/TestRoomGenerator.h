@@ -6,11 +6,14 @@
 
 class TestRoomGenerator: public MapGenerator {
 
+    constexpr static int roomChunkSize = 2;
+
 public:
     TestRoomGenerator() {}
     ~TestRoomGenerator() {}
 
-    void generate(Map* map) override;
+protected:
+    void generation(Map* map, Map::ChunkMap& chunks) override;
 };
 
 

@@ -4,14 +4,12 @@
 #include "Tile.h"
 #include "Config.h"
 
-class Chunk {
+struct Chunk {
 
     Tile tiles[CHUNK_SIDE][CHUNK_SIDE];
 
-public:
     Chunk() {}
     ~Chunk() {}
-
 };
 
 

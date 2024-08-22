@@ -15,33 +15,34 @@
 class Engine {
 
 protected:
-    Session session;
-    EventHandler eventHandler;
     std::unordered_set<Controller*> controllers;
     std::unordered_set<Entity*> updatable;
+    Session session;
+    EventHandler eventHandler;
 private:
     bool isRunning;
+    bool isExecuted;
 
 public:
-    Engine(): eventHandler(EventHandler(session)), isRunning(false) { initialization(); }
+    Engine(): eventHandler(EventHandler(session)), isRunning(false), isExecuted(false) { initialization(); }
     ~Engine() {}
 
     /*
      * @brief start the engine processing thread
      *
      */
-    void execute() { if (!isRunning) execution(); }
+    void execute() { if (!isActive()) execution(); }
     /*
      * @brief stop the engine processing thread
      *
      */
-    void shutdown() { isRunning = false; }
+    void shutdown() { isExecuted = false; }
     /*
      * @brief shows whether the engine is running
      *
      * @return is the engine running now
      */
-    bool isExecuted() const { return isRunning; }
+    bool isActive() const { return isExecuted || isRunning; }
 
 protected:
     /*

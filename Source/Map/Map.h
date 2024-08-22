@@ -1,19 +1,32 @@
 #ifndef DUNGEONOFDESPAIR_MAP_H
 #define DUNGEONOFDESPAIR_MAP_H
 
-#include <vector>
+#include <unordered_map>
 
-#include "Tileset/Tile.h"
+#include "Cords.h"
+#include "Chunk.h"
 
+
+class MapGenerator;
 
 class Map {
 
-    std::vector<std::vector<Tile>> tiles;
+public:
+    using ChunkMap = std::unordered_map<Cords<int>, Chunk>;
+    friend MapGenerator;
+
+protected:
+    ChunkMap chunks;
     unsigned int weight;
     unsigned int height;
 
 public:
-    Map(int weight, int height): weight(weight), height(height) {}
+    Map(unsigned int weight = 0, unsigned int height = 0): weight(weight), height(height) { initialization(); }
+
+    void refresh(unsigned int w, unsigned int h);
+
+private:
+    void initialization();
 
 };
 
