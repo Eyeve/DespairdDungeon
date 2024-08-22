@@ -26,8 +26,6 @@ public:
     Engine(): eventHandler(EventHandler(session)), isRunning(false) { initialization(); }
     ~Engine() {}
 
-    void initialization();
-
     /*
      * @brief start the engine processing thread
      *
@@ -57,6 +55,9 @@ protected:
      * @param deltaTime amount of time that has passed since the last update
      */
     void update(float deltaTime);
+
+private:
+    void initialization();
 
 };
 
