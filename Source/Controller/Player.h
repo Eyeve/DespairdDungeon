@@ -7,14 +7,16 @@
 class Player: public Controller {
 
 public:
+    Player() {}
+    ~Player() {}
     /*
      * @brief updates player data using SessionEvent
      *
      * @param event the updates
      */
-    void update(SessionEvent& event);
+    void update(SessionEvent& event) {}
 
-    ControllerEvent tick() override;
+    ControllerEvent tick() override { return ControllerEvent(); }
 };
 
 

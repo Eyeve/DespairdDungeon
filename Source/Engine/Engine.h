@@ -25,7 +25,7 @@ private:
 
 public:
     Engine(): eventHandler(EventHandler(session)), isRunning(false), isExecuted(false) { initialization(); }
-    ~Engine() {}
+    ~Engine() { for (Controller* toDelete: controllers) delete toDelete; }
 
     /*
      * @brief start the engine processing thread

@@ -3,6 +3,7 @@
 
 #include "Engine.h"
 #include "TestRoomGenerator.h"
+#include "Creature.h"
 
 
 class DungeonOfDespair: public Engine {
@@ -13,6 +14,7 @@ public:
 
 private:
     void execution() override;
+    void createHero();
 
 };
 

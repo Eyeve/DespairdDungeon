@@ -3,9 +3,14 @@
 
 #include "Map.h"
 #include "MapGenerator.h"
+#include "Entity.h"
+
 
 struct Session {
 
+    using EntityMap = std::unordered_map<Cords<int>, Entity*>;
+
+    EntityMap entities;
     Map* map;
     MapGenerator* mapGenerator;
 
