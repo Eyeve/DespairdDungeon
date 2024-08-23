@@ -29,7 +29,8 @@ SOURCES += \
     Source/Generator/CreatureGenerator/CreatureGenerator.cpp \
     Source/Utils/ChunkCords.cpp \
     Source/Utils/Cords.cpp \
-    Source/UI/MainWindow.cpp
+    Source/UI/MainWindow.cpp \
+    Source/UI/Camera.cpp
 
 HEADERS += \
     Source/Entity/Entity.h \
@@ -59,7 +60,9 @@ HEADERS += \
     Source/Texture/Texture.h \
     Source/Entity/ColliderEntity.h \
     Source/Utils/ChunkCords.h \
-    Source/UI/MainWindow.h
+    Source/UI/MainWindow.h \
+    Source/UI/Camera.h \
+    Tests/Tests.h
 
 INCLUDEPATH += \
     Source \
@@ -78,7 +81,8 @@ INCLUDEPATH += \
     Source/Tileset \
     Source/Collider \
     Source/Texture \
-    Source/UI
+    Source/UI \
+    Tests
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

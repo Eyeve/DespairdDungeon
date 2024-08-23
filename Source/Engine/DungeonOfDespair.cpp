@@ -20,6 +20,6 @@ void DungeonOfDespair::createHero() {
 
     Creature* hero = new Creature(player, nullptr, Cords<int>(20, 20), nullptr);
     controllers.insert(player);
-    updatable.insert(hero);;
+    playerEntities.insert(hero);;
 }
 

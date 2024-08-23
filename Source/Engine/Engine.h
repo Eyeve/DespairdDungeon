@@ -16,7 +16,7 @@ class Engine {
 
 protected:
     std::unordered_set<Controller*> controllers;
-    std::unordered_set<Entity*> updatable;
+    std::unordered_set<Entity*> playerEntities;
     Session session;
     EventHandler eventHandler;
 private:

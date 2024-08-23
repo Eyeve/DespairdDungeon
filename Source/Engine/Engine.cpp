@@ -28,8 +28,8 @@ void Engine::update(float deltaTime) {
     for (Controller* controller: controllers) {
         eventHandler.process(controller->tick());
     }
-    for (Entity* toUpdate: updatable) {
-        eventHandler.update(toUpdate);
+    for (Entity* playerEntity: playerEntities) {
+        eventHandler.update(playerEntity);
     }
 }
 

@@ -1,10 +1,13 @@
 #include <thread>
 
 #include "DungeonOfDespair.h"
+#include "Tests.h"
 
 #define SUCCESS 0
 
-int main() {
+int main(int argc, char* argv[]) {
+    return DoDtests::testUI(argc, argv);
+
     DungeonOfDespair dungeonOfDespair;
 
     std::thread engineThread(&DungeonOfDespair::execute, &dungeonOfDespair);
